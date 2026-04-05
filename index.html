@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Only Bannu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff0f3;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #4a4a4a;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            perspective: 1000px;
+        }
+
+        /* The 'Page' Styling */
+        .apology-page {
+            background: #ffffff;
+            border-radius: 30px;
+            padding: 40px 25px;
+            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
+            border: 2px solid #ffe4e1;
+            text-align: center;
+            display: none; /* Hidden by default */
+            position: relative;
+            animation: flipIn 0.8s ease forwards;
+        }
+
+        /* Show the first page initially */
+        #page1 { display: block; }
+
+        @keyframes flipIn {
+            0% { transform: rotateY(-90deg); opacity: 0; }
+            100% { transform: rotateY(0deg); opacity: 1; }
+        }
+
+        /* Headings and Typography */
+        h1.letter-head {
+            font-family: 'Dancing Script', cursive;
+            font-size: 38px;
+            color: #d63384;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        h2.page-num {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffb6c1;
+            margin-bottom: 25px;
+        }
+
+        .bubu-gif {
+            width: 80%;
+            max-width: 220px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+
+        .apology-text {
+            text-align: left;
+            line-height: 1.8;
+            font-size: 16px;
+            padding: 0 10px;
+            color: #5d5d5d;
+        }
+
+        .highlight {
+            color: #d63384;
+            font-weight: 500;
+        }
+
+        /* The 'Surprise Gift' styling */
+        .gift-box {
+            background: #fffafa;
+            border: 2px dashed #ffb6c1;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        /* The 'Continue' Buttons */
+        .next-btn {
+            background: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 35px;
+            box-shadow: 0 5px 15px rgba(255, 182, 193, 0.5);
+            transition: all 0.3s ease;
+            width: 80%;
+        }
+
+        .next-btn:active {
+            transform: scale(0.95);
+            background: #f06292;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="apology-page" id="page1">
+        <h2 class="page-num">Chapter 1</h2>
+        <h1 class="letter-head">Bannu, I'm Sorry.</h1>
+        <img class="bubu-gif" src="https://media.tenor.com/7D-RCHGsc78AAAAM/bubu-dudu-bubu.gif" alt="Crying Bubu">
+        <div class="apology-text">
+            <p>I’ve been sitting here for hours, thinking about the look on your face when you left. That look is burned into my mind, and <span class="highlight">it breaks my heart</span>.</p>
+            <p>I know I’m the reason for that sadness, Bannu, and I hate myself for it. Please click to see how truly sorry I am.</p>
+        </div>
+        <button class="next-btn" onclick="nextPage(1)">Continue...</button>
+    </div>
+
+    <div class="apology-page" id="page2">
+        <h2 class="page-num">Chapter 2</h2>
+        <h1 class="letter-head">I Am A Dummy.</h1>
+        <img class="bubu-gif" src="https://media.tenor.com/n14S432pG7kAAAAM/bubu-dudu-sseeyall.gif" alt="Sad Dudu">
+        <div class="apology-text">
+            <p>Sometimes I act like Dudu—a total, thoughtless dummy. I say things without thinking about how they will land on the person I love most in the world.</p>
+            <p>My actions were selfish, Bannu. I forgot to prioritize your feelings, and <span class="highlight">there is no excuse for that.</span> I am so, so sorry.</p>
+        </div>
+        <button class="next-btn" onclick="nextPage(2)">Continue...</button>
+    </div>
+
+    <div class="apology-page" id="page3">
+        <h2 class="page-num">Chapter 3</h2>
+        <h1 class="letter-head">The World is Grey.</h1>
+        <img class="bubu-gif" src="https://media.tenor.com/p_oQyO_5o9QAAAAM/dudu-sad.gif" alt="Alone Dudu">
+        <div class="apology-text">
+            <p>Everything feels wrong when you are mad at me. Food tastes bland, my favorite things seem boring, and my days are just <span class="highlight">empty without our laughs.</span></p>
+            <p>I miss your voice. I miss your smile. I miss how everything feels right when your hand is in mine. I'm sorry for ruining that peace, Bannu.</p>
+        </div>
+        <button class="next-btn" onclick="nextPage(3)">Continue...</button>
+    </div>
+
+    <div class="apology-page" id="page4">
+        <h2 class="page-num">Chapter 4</h2>
+        <h1 class="letter-head">I Took You For Granted.</h1>
+        <img class="bubu-gif" src="https://media.tenor.com/z2O6Y9T_DqMAAAAM/dudu-bubu.gif" alt="Hugging Dudu">
+        <div class="apology-text">
+            <p>This is the hardest part to admit. I think I got too comfortable and took your kindness and presence for granted.</p>
+            <p>I didn't give you the respect or the patience you deserve. I didn't see the little things you do for us. <span class="highlight">I let you down</span>, and for that, I am truly sorry, Bannu.</p>
+        </div>
+        <button class="next-btn" onclick="nextPage(4)">Continue...</button>
+    </div>
+
+    <div class="apology-page" id="page5">
+        <h2 class="page-num">Chapter 5</h2>
+        <h1 class="letter-head">Our Memories.</h1>
+        <img class="bubu-gif" src="https://media.tenor.com/xT5R06r94YIAAAAM/bubu-dudu-bubu.gif" alt="Holding hands">
+        <div class="apology-text">
+            <p>I keep thinking about tjose video calls before sleeping and after waking up . Those are the moments I live for.</p>
+            <p>I am fighting so hard right now because <span class="highlight">I cannot lose 'Us'.</span> I'm sorry for jeopardizing our future because of my mistakes. Please forgive your Dipu.</p>
+        </div>
+        <button class="next-btn" onclick="nextPage(5)">Almost there...</button>
+    </div>
+
+    <div class="apology-page" id="page6">
+        <h2 class="page-num">Chapter 6</h2>
+        <h1 class="letter-head">Give Dipu One Chance.</h1>
+        <img class="bubu-gif" src="https://media.tenor.com/A6_WvW4Y_pEAAAAM/bubu-dudu-bubu.gif" alt="Pleading Dudu">
+        <div class="apology-text">
+            <p>This is my final page of apologies, Bannu. I won’t just 'say' I'm sorry anymore; I want to 'show' you.</p>
+            <p>Can we start over? Can we wipe the slate clean and let me work to <span class="highlight">win back that smile</span>? I love you, Bannu. More than you know.</p>
+        </div>
+        <button class="next-btn" onclick="nextPage(6)">See my promise</button>
+    </div>
+
+    <div class="apology-page" id="page7">
+        <h2 class="page-num">Chapter 7</h2>
+        <h1 class="letter-head">My Promise to my cutuu cutuu Bubu Dinosaur </h1>
+        <img class="bubu-gif" src="https://media.tenor.com/6_N_3T_R_p8AAAAM/bubu-dudu-sseeyall.gif" alt="Happy Bubu Dudu">
+        <div class="apology-text">
+            <p>"I promise to never let go of your hand, even when things get tough. I promise to listen to you better, and always remember <span class="highlight">that you are my priority.</span> I love you, Bannu. Forever." - Dipu ❤️</p>
+        </div>
+        
+        <div class="gift-box">
+            <p><strong>🎁 Your Surprise Gift is waiting!</strong></p>
+            <p>My final apology is coming to you in the form of a long hug. Show this screen to myself to redeem your hug :-)!</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Simple logic to handle the "page" transitions
+    function nextPage(currentPage) {
+        // Find the current page and hide it
+        const currentP = document.getElementById('page' + currentPage);
+        currentP.style.display = 'none';
+
+        // Find the next page and show it
+        const nextP = document.getElementById('page' + (currentPage + 1));
+        if (nextP) {
+            nextP.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top for new page
+        }
+    }
+</script>
+
+</body>
+</html>
